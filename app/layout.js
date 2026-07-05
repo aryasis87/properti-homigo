@@ -6,10 +6,10 @@ import Footer from "@/components/Footer";
 const grotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-grotesk", weight: ["500", "600", "700"], display: "swap" });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 
-const __jsonld = {"@context":"https://schema.org","@type":"RealEstateAgent","name":"Homigo","description":"Marketplace properti modern","url":"https://properti-homigo.vercel.app","areaServed":"ID"};
+const __jsonld = {"@context":"https://schema.org","@type":"RealEstateAgent","name":"Homigo","description":"Marketplace properti modern","url":"https://homigo.pintuweb.com","areaServed":"ID"};
 
 export const metadata = {
-  metadataBase: new URL("https://properti-homigo.vercel.app"),
+  metadataBase: new URL("https://homigo.pintuweb.com"),
   title: "Homigo — Cari Properti Jadi Mudah",
   description: "Marketplace properti modern: jual, beli, dan sewa rumah, apartemen, ruko, tanah, dan villa di seluruh Indonesia.",
   applicationName: "Homigo",
@@ -17,11 +17,11 @@ export const metadata = {
   authors: [{ name: "Homigo" }],
   creator: "Homigo",
   publisher: "Homigo",
-  alternates: { canonical: "https://properti-homigo.vercel.app" },
+  alternates: { canonical: "https://homigo.pintuweb.com" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://properti-homigo.vercel.app",
+    url: "https://homigo.pintuweb.com",
     siteName: "Homigo",
     title: "Homigo — Cari Properti Jadi Mudah",
     description: "Marketplace properti modern: jual, beli, dan sewa rumah, apartemen, ruko, tanah, dan villa di seluruh Indonesia.",
