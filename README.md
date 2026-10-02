@@ -1,22 +1,29 @@
-# Homigo — Cari Properti Jadi Mudah
+# Homigo — Rumah pertama & tempat sewa
 
-Marketplace properti modern: jual, beli, dan sewa rumah, apartemen, ruko, tanah, dan villa di seluruh Indonesia.
+Marketplace untuk pembeli dan penyewa pertama: rumah terjangkau, apartemen, kost, dan gudang. Gaya aplikasi biru dengan Space Grotesk.
 
 **Demo live:** https://properti-homigo.vercel.app
 
 ![Tangkapan layar Homigo](public/og.jpg)
 
-> Template marketplace properti dengan data listing contoh. Formulir kontak hanya demo.
+> Purwarupa desain. Listing, agen, harga, dan alamat adalah contoh fiktif — alamat hanya sampai tingkat kawasan dan tidak ada nomor telepon. Semua formulir (jadwal survei, kontak) hanya menampilkan ringkasan dan tidak mengirim data.
 
-## Konsep
+## Fitur khas
 
-PropTech: putih-slate dengan biru elektrik. Berandanya punya pencarian bertab (Beli/Sewa/Baru), kolase bento, dan kalkulator KPR interaktif.
+- `/bandingkan` — taruh dua sampai tiga listing berdampingan: pengeluaran per bulan (cicilan vs sewa setara), bayar di awal, harga per m², luas, kamar, dan fasilitas; angka terbaik tiap baris ditandai dan tautannya bisa dibagikan (`?id=1,2`).
+- Filter harga memisahkan beli dan sewa; sewa tahunan disetarakan per bulan.
+- Kalkulator KPR di beranda.
 
-Semua varian punya `/properti` dengan filter, halaman detail dengan galeri foto dan video, serta `/kontak` dan `/tentang`.
+## Fitur bersama
+
+- Katalog `/properti` dengan filter status, jenis, kota, harga (beli dan sewa dipisah), kamar, dan urutan.
+- Halaman detail: galeri, spesifikasi termasuk harga per m², peta tingkat kecamatan, dan formulir jadwal survei (tanggal dihitung dalam WIB di peramban).
+- `/kontak` dengan pilihan topik (tautan "Ajukan listing" membuka topik jual), `/tentang` dengan daftar agen yang disusun dari data.
+- Semua konten berasal dari `lib/data.js`; statistik dihitung dari data, bukan klaim.
 
 ## Halaman
 
-`/` · `/kontak` · `/properti` · `/properti/[id]` · `/tentang`
+`/` · `/bandingkan` · `/kontak` · `/properti` · `/properti/[id]` · `/tentang`
 
 ## Teknologi
 
@@ -35,6 +42,29 @@ npm run dev
 ```
 
 Buka http://localhost:3000. Untuk build produksi: `npm run build` lalu `npm start`.
+
+## Kredit foto
+
+Semua foto berlisensi CC0 (domain publik), dipotong ke 4:3 dan dikonversi ke WebP.
+
+| Berkas | Fotografer | Sumber | Lisensi |
+| --- | --- | --- | --- |
+| `apartemen-gedung.webp` | Matt Bango | [StockSnap](https://stocksnap.io/photo/apartment-building-2T9NFO4RNI) | CC0 |
+| `apartemen-putih.webp` | — | [rawpixel](https://www.rawpixel.com/image/3285824/free-photo-image-office-building-residence-city) | CC0 |
+| `dapur-terang.webp` | The Pic Pac | [StockSnap](https://stocksnap.io/photo/kitchen-sink-L07UXRLREE) | CC0 |
+| `gudang.webp` | — | [rawpixel](https://www.rawpixel.com/image/5915267/free-warehouse-shop-public-domain-cc0-photo) | CC0 |
+| `kamar-hangat.webp` | — | [rawpixel](https://www.rawpixel.com/image/5917601/image-public-domain-wood-house) | CC0 |
+| `kamar-kost.webp` | Medhat Ayad | [StockSnap](https://stocksnap.io/photo/apartment-bed-EGXWIV409M) | CC0 |
+| `kamar-kota.webp` | — | [rawpixel](https://www.rawpixel.com/image/5920688/photo-image-public-domain-house-home) | CC0 |
+| `kamar-studio.webp` | Sylwia Pietruszka | [StockSnap](https://stocksnap.io/photo/bed-table-FND1JADL6W) | CC0 |
+| `lahan.webp` | JJ Skys the Limit | [StockSnap](https://stocksnap.io/photo/grassy-field-TQZZ18QJPR) | CC0 |
+| `ruang-tamu-sofa.webp` | — | [rawpixel](https://www.rawpixel.com/image/5927318/photo-image-public-domain-minimalist-house) | CC0 |
+| `ruang-tamu-terang.webp` | — | [rawpixel](https://www.rawpixel.com/image/5917348/image-frame-light-public-domain) | CC0 |
+| `ruang-teras-kayu.webp` | Joshua Ness | [StockSnap](https://stocksnap.io/photo/house-home-CLD6T4J9VZ) | CC0 |
+| `rumah-dua-lantai.webp` | — | [rawpixel](https://www.rawpixel.com/image/5913733/image-public-domain-plants-house) | CC0 |
+| `rumah-kotak.webp` | — | [rawpixel](https://www.rawpixel.com/image/6042800/photo-image-public-domain-minimal-house) | CC0 |
+| `rumah-modern.webp` | — | [rawpixel](https://www.rawpixel.com/image/6070500/free-public-domain-cc0-photo) | CC0 |
+| `rumah-satu-lantai.webp` | — | [rawpixel](https://www.rawpixel.com/image/5914459/photo-image-public-domain-house-family) | CC0 |
 
 ---
 

@@ -13,7 +13,7 @@ export default function Rekomendasi() {
     <div>
       <div className="inline-flex rounded-full border border-black/10 bg-white p-1">
         {tabs.map((t) => (
-          <button key={t} onClick={() => setTab(t)} className={`rounded-full px-5 py-2 text-sm font-semibold transition ${tab === t ? 'bg-forest text-white' : 'text-muted hover:text-ink'}`}>{t === 'Disewakan' ? 'Disewa' : 'Dijual'}</button>
+          <button key={t} type="button" aria-pressed={tab === t} onClick={() => setTab(t)} className={`rounded-full px-5 py-2 text-sm font-semibold transition ${tab === t ? 'bg-forest text-white' : 'text-muted hover:text-ink'}`}>{t === 'Disewakan' ? 'Disewa' : 'Dijual'}</button>
         ))}
       </div>
       <motion.div layout className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

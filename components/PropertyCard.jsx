@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { BedDouble, Bath, Maximize, MapPin } from 'lucide-react';
-import { formatHarga } from '@/lib/data';
+import { hargaLabel } from '@/lib/data';
 
 export default function PropertyCard({ item }) {
   const s = item.spesifikasi;
@@ -9,12 +9,12 @@ export default function PropertyCard({ item }) {
   return (
     <Link href={`/properti/${item.id}`} className="group block overflow-hidden rounded-2xl border border-black/5 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg">
       <div className="relative h-52 overflow-hidden">
-        <Image src={item.media.foto[0]} alt={item.judul} fill sizes="(max-width:768px) 100vw, 33vw" className="object-cover transition duration-700 group-hover:scale-105" />
+        <Image src={item.media.foto[0]} alt="" fill sizes="(max-width:768px) 100vw, 33vw" className="object-cover transition duration-700 group-hover:scale-105" />
         <span className={`absolute left-3 top-3 rounded-full px-3 py-1 text-xs font-semibold text-white ${item.status === 'Dijual' ? 'bg-forest' : 'bg-gold'}`}>{item.status}</span>
       </div>
       <div className="p-4">
         <div className="flex items-center justify-between gap-2">
-          <p className="font-display text-xl font-bold text-forest">{formatHarga(item.harga)}</p>
+          <p className="font-display text-xl font-bold text-forest">{hargaLabel(item)}</p>
           <span className="rounded-lg bg-sand px-2.5 py-1 text-[11px] font-semibold text-forest">{item.jenisProperti}</span>
         </div>
         <h3 className="mt-2 line-clamp-1 font-semibold text-ink transition-colors group-hover:text-forest">{item.judul}</h3>
